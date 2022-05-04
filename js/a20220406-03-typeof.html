@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a20220406-03-typeof</title>
+</head>
+<body>
+    <div class="abc">1</div>
+    <div class="abc">2</div>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        let a = 10,
+            b;
+
+
+        // 印出資料的類型 
+        console.log( typeof a );
+        console.log( typeof b );
+        console.log( typeof 1 );
+        console.log( typeof true );
+        console.log( typeof 'shin' );
+        console.log( typeof null );  // 空值null是'object'
+        console.log( typeof undefined );
+        console.log( typeof Number ); // function 函式
+        console.log( typeof typeof a ); // typeof 'number'
+
+        const abc = document.querySelectorAll('.abc');
+        console.log(abc);
+        console.log(typeof abc);
+        console.log(abc.constructor.name); //建構函式
+
+
+        let c = a>5 || (b=7) ;
+
+        // b沒有賦值，所以undifind
+        // c會得到true
+        console.log('bc:',b,c);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

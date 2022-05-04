@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a20220406-14-for</title>
+
+    <style>
+        .rect{
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: lightblue;
+            border: 1px solid #000;
+        }
+        .ball{
+            position: absolute;
+            /* top: 0; */
+            /* left: 0; */
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 207, 102);
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 50px;
+            color: rgb(0, 35, 66);
+            border-radius: 50%;
+        }
+
+        .op{
+            opacity: 0;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="rect">
+        <!-- <div class="ball">888</div> -->
+    </div>
+
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+
+    const rect = $('.rect');
+
+    // for (let i = 0 ; i<10 ; i++){
+    //     const div = $(`<div class="ball">${i+1}</div>`);
+
+    //     div.css({
+    //         left: 20 + i *80,
+    //         top: 100 + i *20,
+    //     });
+
+    //     rect.append(div);
+    // }
+
+
+    let str = "";
+    let n = 1 ;
+    for(let i = 0 ; i < 6 ; i++){
+        for(let k = 0 ; k < 9 ; k++){
+            n++;
+
+            // 只要到49的寫法
+            if(n === 49){
+                // break;  
+                continue;
+            }
+        const left = 50 + k *60;
+        const top = 50 + i *60;
+        str += `<div class="ball" style="left: ${left}px; top: ${top}px;">${n}</div>`
+    }
+    }
+    rect.append(str);
+    // 點到的球消失
+    // $('.ball').click(function(){
+    //     $(this).css('background','transparent').css('color','transparent').css('border','transparent');
+    // })
+    $('.ball').click(function(){
+        $(this).toggleClass('op');
+    })
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

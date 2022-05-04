@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a20220408-03-Array-methods</title>
+</head>
+<body>
+    <div class="info"></div>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        const ar1 = [2,4,6,8];
+        const ar2 = [1,3,5,7,9];
+
+        // ar3是 ar1連接ar2 (全新的不影響ar1和ar2)
+        const ar3 = ar1.concat(ar2);
+
+        console.log({ar3});
+        console.log(ar3.indexOf(5)); //拿到5的索引值'6'
+        console.log(ar3.indexOf('5')); //找不到回傳-1 
+        console.log(ar3.toString()); //字串
+        console.log(ar3.join(' & ')); //
+        console.log(ar3.join('---')); //
+        console.log(ar3.slice(3,6)); // 淺層拷貝，取3-6的值(不含6)
+        console.log(ar3.slice(3)); // 淺層拷貝，取3之後的值
+        console.log(ar3.slice()); // 淺層拷貝，取0之後的值
+
+
+    </script>
+</body>
+</html>
